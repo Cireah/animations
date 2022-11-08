@@ -1,0 +1,149 @@
+.squarecenter
+{
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 45%;
+    animation-name: orbit;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circlecenter
+{
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 45%;
+    animation-name: orbit;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.trianglecenter
+{
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 45%;
+    animation-name: orbit;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.square
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 300%;
+    background-color: red;
+    animation-name: squareAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle 
+{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -100%;
+    left: 50%;
+    background-color: blue;
+    animation-name: circleAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.triangle 
+{
+    position: absolute;
+	width: 0;
+	height: 0;
+    top: -150%;
+    left: 20%;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+    animation-name: triangleAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes orbit { 
+    0%
+    { 
+        transform:rotate(0deg);
+    }
+
+    100% 
+    { 
+        transform:rotate(360deg);
+    } 
+    }
+
+@keyframes squareAnim 
+{
+    0%
+    {
+        transform:rotate(0deg);
+    }
+    
+    100%
+    {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes circleAnim 
+{
+    0%
+    {
+        
+    }
+
+    50%
+    {
+        
+    }
+    
+    100%
+    {
+
+    }
+}
+
+@keyframes trinagleAnim 
+{
+    0%
+    {
+        
+    }
+
+    50%
+    {
+        
+    }
+    
+    100%
+    {
+
+    }
+}
