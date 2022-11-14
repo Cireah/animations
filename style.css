@@ -7,8 +7,8 @@
     height: 100px;
     top: 40%;
     left: 45%;
-    animation-name: orbit;
-    animation-duration:5s;
+    animation-name: orbitcw;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -22,8 +22,8 @@
     height: 100px;
     top: 40%;
     left: 45%;
-    animation-name: orbit;
-    animation-duration: 2s;
+    animation-name: orbitcw;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -37,7 +37,7 @@
     height: 100px;
     top: 40%;
     left: 45%;
-    animation-name: orbit;
+    animation-name: orbitccw;
     animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -48,7 +48,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    top: 300%;
+    top: 320%;
     background-color: red;
     animation-name: squareAnim;
     animation-duration: 5s;
@@ -76,18 +76,56 @@
     position: absolute;
 	width: 0;
 	height: 0;
-    top: -150%;
-    left: 20%;
+    top: -190%;
+    left: 45%;
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
-	border-bottom: 50px solid #555;
+	border-bottom: 50px solid green;
     animation-name: triangleAnim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-@keyframes orbit { 
+.papcenter
+{
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 45%;
+    animation-name: orbitccw;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.pap
+{
+    position: absolute;
+    top: 380%;
+    animation-name: papAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.papimg
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation-name: papSize;
+    animation-duration: 10s;
+    animation-iteration-count: inherit;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+@keyframes orbitcw 
+{ 
     0%
     { 
         transform:rotate(0deg);
@@ -97,7 +135,20 @@
     { 
         transform:rotate(360deg);
     } 
+}
+
+@keyframes orbitccw 
+{ 
+    0%
+    { 
+        transform:rotate(360deg);
     }
+
+    100% 
+    { 
+        transform:rotate(0deg);
+    } 
+}
 
 @keyframes squareAnim 
 {
@@ -116,21 +167,26 @@
 {
     0%
     {
-        
+        background-color: darkmagenta;
     }
 
-    50%
+    33%
     {
-        
+        background-color: palevioletred;
     }
     
+    66%
+    {
+        background-color: violet;
+    }
+
     100%
     {
-
+        background-color: darkmagenta;
     }
 }
 
-@keyframes trinagleAnim 
+@keyframes triangleAnim 
 {
     0%
     {
@@ -145,5 +201,61 @@
     100%
     {
 
+    }
+}
+
+@keyframes papAnim 
+{
+    0%
+    {
+        transform:rotate(0deg);
+    }
+
+    50%
+    {
+        
+    }
+    
+    100%
+    {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes papSize
+{
+    18%
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    20%
+    {
+        width: 500px;
+        height: 200px;
+    }
+    
+    22%
+    {
+        width: 50px;
+        height: 50px;
+    }
+    73%
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    75%
+    {
+        width: 500px;
+        height: 200px;
+    }
+    
+    78%
+    {
+        width: 50px;
+        height: 50px;
     }
 }
